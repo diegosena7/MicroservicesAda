@@ -18,13 +18,10 @@ import java.util.Optional;
 @Service
 public class GetMovieByImdbIdProvider implements GetMovieByImdbIdGateway {
 
-    private final MovieMapper movieMapper = Mappers.getMapper(MovieMapper.class);
-    
-    private final MovieRepository movieRepository;
+    private final MovieClient movieClient;
 
     @Override
     public Optional<Movie> execute(String ImdbId) {
-        final Optional<MovieEntity> optional = movieRepository.findByImdbIdIgnoreCase(ImdbId);
-        return optional.map(movieMapper::of);
+        return movieClient.findByImdbIdIgnoreCase(ImdbId);
     }
 }

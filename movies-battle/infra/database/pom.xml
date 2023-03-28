@@ -40,6 +40,7 @@
             **/src/**/core/**,
             **/src/**/MoviesBattleApplication.java
         </sonar.coverage.exclusions>
+        <feign-core.version>12.2</feign-core.version>
     </properties>
 
     <dependencies>
@@ -138,6 +139,13 @@
             <artifactId>p6spy</artifactId>
             <version>${p6spy.version}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/io.github.openfeign/feign-core -->
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-core</artifactId>
+            <version>${feign-core.version}</version>
+        </dependency>
+
     </dependencies>
 
     <dependencyManagement>

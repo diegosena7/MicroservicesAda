@@ -14,10 +14,10 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class GetAllMoviesCountProvider implements GetAllMoviesCountGateway {
 
-    private final MovieRepository movieRepository;
+    private final MovieClient movieClient;
 
     @Override
     public Long execute() {
-        return movieRepository.count();
+        return movieClient.count();
     }
 }

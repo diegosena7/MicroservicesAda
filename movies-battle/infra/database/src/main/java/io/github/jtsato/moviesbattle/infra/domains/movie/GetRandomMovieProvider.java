@@ -19,15 +19,11 @@ import java.util.Optional;
 @Service
 public class GetRandomMovieProvider implements GetRandomMovieGateway {
 
-    private final MovieMapper movieMapper = Mappers.getMapper(MovieMapper.class);
+    private final MovieClient movieClient;
 
-    private final MovieRepository movieRepository;
 
     @Override
     public Optional<Movie> execute() {
-        final long count = movieRepository.count();
-        final int index = (int) (Math.random() * count);
-        final Optional<MovieEntity> optional = movieRepository.findAll(PageRequest.of(index, 1)).stream().findFirst();
-        return optional.map(movieMapper::of);
+        return movieClient.findRandomMovie();
     }
 }
