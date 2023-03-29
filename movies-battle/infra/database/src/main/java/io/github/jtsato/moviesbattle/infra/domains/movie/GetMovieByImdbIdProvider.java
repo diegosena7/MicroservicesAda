@@ -14,14 +14,13 @@ import java.util.Optional;
  */
 
 @RequiredArgsConstructor
-@Transactional(readOnly = true)
 @Service
 public class GetMovieByImdbIdProvider implements GetMovieByImdbIdGateway {
-
+    private static final MovieResponseMapper MOVIE_RESPONSE_MAPPER = Mappers.getMapper(MovieResponseMapper.class);
     private final MovieClient movieClient;
 
     @Override
     public Optional<Movie> execute(String ImdbId) {
-        return movieClient.findByImdbIdIgnoreCase(ImdbId);
+        return Optional.of(MOVIE_RESPONSE_MAPPER.of(movieClient.getMovieByImdbId(ImdbId)));
     }
 }

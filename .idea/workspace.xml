@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e05da74c-5de5-4f07-a233-21df63ae1a69" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies-battle/infra/database/src/main/java/io/github/jtsato/moviesbattle/infra/domains/movie/GetAllMoviesCountProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies-battle/infra/database/src/main/java/io/github/jtsato/moviesbattle/infra/domains/movie/GetAllMoviesCountProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies-battle/infra/database/src/main/java/io/github/jtsato/moviesbattle/infra/domains/movie/MovieClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies-battle/infra/database/src/main/java/io/github/jtsato/moviesbattle/infra/domains/movie/MovieClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-movies/src/main/java/com/ada/microsservice/movie/controller/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-movies/src/main/java/com/ada/microsservice/movie/controller/MovieController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-movies/src/main/java/com/ada/microsservice/movie/service/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-movies/src/main/java/com/ada/microsservice/movie/service/MovieService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,14 +39,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/luizito/ada/microsservices-ada/Microsservices-Ada",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/luizito/ada/microsservices-ada/Microsservices-Ada&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="MoviesBattleApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="io.github.jtsato.moviesbattle.MoviesBattleApplication" />

@@ -10,7 +10,6 @@ import org.springframework.transaction.annotation.Transactional;
  */
 
 @RequiredArgsConstructor
-@Transactional(readOnly = true)
 @Service
 public class GetAllMoviesCountProvider implements GetAllMoviesCountGateway {
 
@@ -18,6 +17,6 @@ public class GetAllMoviesCountProvider implements GetAllMoviesCountGateway {
 
     @Override
     public Long execute() {
-        return movieClient.count();
+        return movieClient.getAllMoviesCount().count();
     }
 }

@@ -1,23 +1,20 @@
 package io.github.jtsato.moviesbattle.infra.domains.movie;
 
-import feign.Headers;
-import feign.Param;
-import feign.RequestLine;
-import io.github.jtsato.moviesbattle.core.domains.movie.model.Movie;
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.Optional;
 
+@FeignClient(name = "movies", url = "localhost:8082")
 public interface MovieClient {
 
-    @RequestLine("GET htto://localhost:8082/movies/{imdb}")
-    @Headers("Content-Type: application/json")
-    Optional<Movie> findByImdbIdIgnoreCase(@Param String imdb);
+    @GetMapping(value = "/movies/byImdbId/{imdbId}")
+    MovieResponse getMovieByImdbId(@PathVariable("imdbId") final String imdbId);
 
-    @RequestLine("GET htto://localhost:8082/movies")
-    @Headers("Content-Type: application/json")
-    long count();
+    @GetMapping(value = "/movies/count")
+    MoviesCountResponse getAllMoviesCount();
 
-    @RequestLine("GET htto://localhost:8082/movies/random")
-    @Headers("Content-Type: application/json")
-    Optional<Movie> findRandomMovie();
+    @GetMapping(value = "/movies/random")
+    MovieResponse getRandomMovie();
 }

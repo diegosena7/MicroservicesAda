@@ -15,15 +15,16 @@ import java.util.Optional;
  */
 
 @RequiredArgsConstructor
-@Transactional(readOnly = true)
 @Service
 public class GetRandomMovieProvider implements GetRandomMovieGateway {
 
+    private static final MovieResponseMapper MOVIE_RESPONSE_MAPPER = Mappers.getMapper(MovieResponseMapper.class);
     private final MovieClient movieClient;
+
 
 
     @Override
     public Optional<Movie> execute() {
-        return movieClient.findRandomMovie();
+        return Optional.of(MOVIE_RESPONSE_MAPPER.of(movieClient.getRandomMovie()));
     }
 }
